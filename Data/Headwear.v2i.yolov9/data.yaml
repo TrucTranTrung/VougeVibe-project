@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Head_wear']
+
+roboflow:
+  workspace: harry-hunh
+  project: headwear
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/harry-hunh/headwear/dataset/2

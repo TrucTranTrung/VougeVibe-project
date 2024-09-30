@@ -1,0 +1,6 @@
+train: ../train/images
+val: ../test/images
+test: ../valid/images
+
+nc: 10
+names: ['bag', 'dress', 'hat', 'jacket', 'pants', 'shirt', 'shoe', 'shorts', 'skirt', 'sunglass']
