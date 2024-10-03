@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+Pillow
+numpy
+torch
+
+
