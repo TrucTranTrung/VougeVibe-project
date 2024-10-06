@@ -20,15 +20,14 @@ origins = [
     "http://localhost:3000",  # Địa chỉ frontend của bạn
 ]
 app = FastAPI()
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins, 
-    allow_credentials=True,
+app.add_middleware( 
+    CORSMiddleware, 
+    allow_origin_regex="http://localhost:3000",  
+    allow_credentials=True, 
     allow_methods=["*"], 
-    allow_headers=["*"], 
-)
+    allow_headers=["*"], )
 # Load model Fashion
-fashion_model = YOLO("C:\\Users\\Anreal\\Desktop\\helloAc\\162925_Full_Stack_Ecommerce\\Py\\best.pt")
+fashion_model = YOLO("D:\\Model-Fashion\\E-Fas\\best.pt")
 class_list = ['BAG', 'DRESS', 'HAT', 'JACKET', 'PANTS', 'SHIRT', 'SHOES', 'SHORT', 'SKIRT', 'SUNGLASS', 'HEADWEAR']
 url_Images = "http://localhost:4000/allimages/detect"
 nameImage_list = []
