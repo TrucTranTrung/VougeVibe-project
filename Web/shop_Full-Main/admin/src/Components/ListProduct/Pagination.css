@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    padding: 6px 15px;
+    color:  black !important; /* Màu chữ mặc định */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+  }
+
+  .page-item:last-child >.page-link:hover, .page-item:first-child .page-link:hover{
+    background-color: transparent !important; /* Màu nền khi hover */
+    color: black; /* Màu chữ khi hover */
+  }
+  
+  .page-link:hover {
+    background-color: #e64f4cdc !important; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+  }
+  
+  .active .page-link {
+    background-color: #EB423F !important; /* Màu nền cho trang hiện tại */
+    color: white !important; /* Màu chữ cho trang hiện tại */
+    border: 1px solid #EB423F !important; /* Đường viền cho trang hiện tại */
+  }
