@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from PIL import Image
 import numpy as np
 import torch
+import torch.nn as nn
+from torchvision import models, transforms
 import cv2
 from ultralytics import YOLO
 from io import BytesIO
@@ -14,6 +16,7 @@ import h5py
 from typing import List, Optional
 import base64
 import requests
+import os
 
 # Cấu hình CORS
 origins = [
@@ -43,6 +46,17 @@ def load_image_into_numpy_array(data):
     if image.mode == 'RGBA':
         image = image.convert('RGB')
     return np.array(image)
+
+def get_formatted_filename(url):
+    filename_with_extension = os.path.basename(url)
+    # Split filename and discard the numbers at the end, keep the first part and the extension
+    name_parts = filename_with_extension.split('_')
+    if '.' in name_parts[-1]:
+        first_part = '_'.join(name_parts[:-1])  # Combine everything except the last number part
+        extension = name_parts[-1].split('.')[-1]
+        return f"{first_part}.{extension}"
+    
+    return filename_with_extension
 
 @app.post("/api-detect", response_model=FashionResponse)
 async def detect_gender(file: UploadFile = File(...)):
@@ -101,15 +115,6 @@ async def detect_gender(file: UploadFile = File(...)):
         Yolo_result =[] 
         if response.status_code == 200:
             serverResImg = response.json()
-            # goi den model voi du lieu serverResImg la list tên ảnh và url tương ứng
-            # [
-            #      "nameImage": "url",
-            #      "nameImage": "url",
-            #      "....": "..."
-            # ]
-            # trả về kết quả 
-            # Yolo_result = ? gán dữ liệu ds ảnh gợi ý + categorys
-            # cropped_images list các ảnh mà model cắt được
             Yolo_result.append({"categorys": categorys, "data": serverResImg})
             return FashionResponse(dataRes=Yolo_result, status=True, message="Success request")
         else:

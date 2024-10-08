@@ -3,5 +3,14 @@ uvicorn
 Pillow
 numpy
 torch
+pydantic
+opencv-python
+ultralytics
+requests
+tensorflow
+h5py
+deepface
+torchvision 
+
 
 
