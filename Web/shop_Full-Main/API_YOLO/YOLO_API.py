@@ -35,9 +35,9 @@ app.add_middleware(
 )
 # Load model Fashion
 
-path_fashion_model = "../modelAI/best.pt" 
-path_label_model = "../modelAI/labels.npy"
-path_saved_features = "../modelAI/saved_features.npy"
+path_fashion_model = "D:\\Model-Fashion\\E-Fas\\best.pt"
+path_label_model = "D:\\GITHUB\\VougeVibe-project\\Features_DataBase\\labels.npy"
+path_saved_features = "D:\\GITHUB\\VougeVibe-project\\Features_DataBase\\saved_features.npy"
 
 class_list = ['BAG', 'DRESS', 'HAT', 'JACKET', 'PANTS', 'SHIRT', 'SHOES', 'SHORT', 'SKIRT', 'SUNGLASS', 'HEADWEAR']
 url_Images = "http://localhost:4000/allimages/detect"
@@ -165,6 +165,7 @@ async def detect_gender(file: UploadFile = File(...)):
         cropped_img = img[ymin:ymax, xmin:xmax]
         cropped_images.append(cropped_img)
 
+    categorys = list(map(lambda x: 'HEADWEAR' if x == 'HAT' else x, categorys))
     if not cropped_images or not categorys:
         categorys  = []
 
