@@ -1,6 +1,6 @@
-# ClothesAI: Shop Full Project
+# VougeVibe: Shop Full Project
 
-**ClothesAI** is a web-based AI platform that recommends clothing products based on images or selfies uploaded by the user. It leverages YOLO for clothing detection, DeepFace for gender detection, and retrieves similar clothing products from the database.
+**VougeVibe** is a web-based AI platform that recommends clothing products based on images or selfies uploaded by the user. It leverages YOLO for clothing detection, DeepFace for gender detection, and retrieves similar clothing products from the database.
 
 ## Features
 - **Image Upload/Selfie**: Allows users to upload photos or take selfies for clothing recommendations.
