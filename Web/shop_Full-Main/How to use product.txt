@@ -1,0 +1,22 @@
+1. Clone project về từ link https://github.com/HaiDaEmVang/shop_Full
+   Tải 3 model API từ a Trực
+   
+2. - Trong file YOLO_API.py chỉnh sửa đường dẫn đến các model API
+     # Load model Fashion
+    path_fashion_model = "../best.pt" 
+    path_label_model = "../labels.npy"
+    path_saved_features = "../saved_features.npy"
+
+
+   - Trong thư mục backend dán file fireBaseLog.json 
+
+
+3. Mở project 
+ - Khởi chạy api Yolo.
+ - Tạo 3 terminal
+	+ terminal 1: ghõ cd backend -> npm i -> node index.js
+	+ terminal 2: ghõ cd frontend -> npm i -> npm run start
+	+ terminal 3: ghõ cd admin -> npm i -> npm run start
+  
+
+		
