@@ -43,6 +43,8 @@ path_saved_features = "../saved_features.npy"
 
 ### Step 3: Add Firebase Configuration
 In the backend folder, paste the fireBaseLog.json file containing your Firebase credentials for user authentication and real-time database operations.
+The best.pt file is the trained YOLO model that detects and categorizes fashion items in images.
+The labels.npy and saved_features.npy file are the featues extraction file of database using RESNET50.
 
 ### Step 4: Start the Application
 Create 3 terminals to run the backend, frontend, and admin services:
@@ -66,4 +68,10 @@ npm run start
 ```
 
 ### Step 5: Start YOLO_API
+## Future Development
+VougeVibe will continue to improve with the following enhancements:
+* Optimization of Recommendation Speed: Reducing response times to ensure a faster recommendation process.
+* Enhanced Fashion Detection Models: Upgrading the YOLO model for more accurate detection and a wider variety of fashion products.
+* Increased Product Diversity: Expanding the product database to include more fashion styles, providing more diverse recommendations.
+* Improved Image Retrieval: Refining the image retrieval system for more precise recommendations, enhancing feature extraction and cosine similarity for better product matching.
 
