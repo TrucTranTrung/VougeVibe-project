@@ -1,4 +1,4 @@
-# VougeVibe: Shop Full Project
+# VougeVibe: Shop Full 
 
 **VougeVibe** is a web-based AI platform that recommends clothing products based on images or selfies uploaded by the user. It leverages YOLO for clothing detection, DeepFace for gender detection, and retrieves similar clothing products from the database.
 
