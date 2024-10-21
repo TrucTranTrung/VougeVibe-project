@@ -4,7 +4,7 @@
 
 # Video Demnstration Product
 
-![GIF](DemoProject.gif)
+[![Xem Video](ImageDemo.png)](https://drive.google.com/file/d/1sC3hdJnYSufe2puGlik3KEoCqhFhrz6C/view?usp=drive_link)
 
 ## Table of Contents
 1. Key Features
