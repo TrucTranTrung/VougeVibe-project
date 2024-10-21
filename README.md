@@ -4,7 +4,7 @@
 
 # Video Demnstration Product
 
-![Video GIF](https://drive.google.com/file/d/1LB6zOEK9VE6l9mH_an-zEqyXDlyDb7Y3/view?usp=sharing)
+![Video GIF](https://drive.google.com/file/d/1LB6zOEK9VE6l9mH_an-zEqyXDlyDb7Y3/view?usp=sharing.gif)
 
 ## Table of Contents
 1. Key Features
