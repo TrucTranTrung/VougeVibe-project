@@ -4,7 +4,7 @@
 
 # Video Demnstration Product
 
-![GIF](assets/DemoProject.gif)
+![GIF](DemoProject.gif)
 
 ## Table of Contents
 1. Key Features
