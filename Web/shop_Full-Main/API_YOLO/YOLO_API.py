@@ -119,7 +119,7 @@ def get_formatted_filename(url):
 
 @app.get("/ping")
 async def ping():
-    return {"message": "API is running fine 🎯"}
+    return {"message": "API is running"}
 
 
 @app.post("/api-detect", response_model=FashionResponse)
