@@ -29,7 +29,7 @@ app.add_middleware(
     allow_headers=["*"], 
 )
 # Load model Fashion
-fashion_model = YOLO("D:\\GITHUB\\Vouge\\Model-Fashion\\E-Fas\\best.pt")
+fashion_model = YOLO("C:\Users\camnh\Downloads\best.pt")
 # Load the processor and model
 processor = AutoImageProcessor.from_pretrained("rizvandwiki/gender-classification")
 model = AutoModelForImageClassification.from_pretrained("rizvandwiki/gender-classification")

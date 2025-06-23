@@ -33,7 +33,7 @@ Ensure the following are installed on your local machine:
 - **MongoDB** (v4 or higher)
 - **Python** (v3.8 or higher)
 - Installed YOLO and DeepFace models
-- Contact `tructran172003@gmail.com` for API models.
+- Contact `camnhungnguyen1712@gmail.com` for API models.
 
 ## Setup Instructions
 

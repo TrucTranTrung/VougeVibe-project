@@ -35,9 +35,9 @@ app.add_middleware(
 )
 # Load model Fashion
 
-path_fashion_model = "D:\\Model-Fashion\\E-Fas\\best.pt"
-path_label_model = "D:\\GITHUB\\VougeVibe-project\\Features_DataBase\\labels.npy"
-path_saved_features = "D:\\GITHUB\\VougeVibe-project\\Features_DataBase\\saved_features.npy"
+path_fashion_model = "C:\\Users\\camnh\\Downloads\\best.pt"
+path_label_model = "C:\\Users\\camnh\\Downloads\\labels.npy"
+path_saved_features ="C:\\Users\\camnh\\Downloads\\saved_features.npy"
 
 class_list = ['BAG', 'DRESS', 'HAT', 'JACKET', 'PANTS', 'SHIRT', 'SHOES', 'SHORT', 'SKIRT', 'SUNGLASS', 'HEADWEAR']
 url_Images = "http://localhost:4000/allimages/detect"
@@ -116,6 +116,11 @@ def get_formatted_filename(url):
         return f"{first_part}.{extension}"
     
     return filename_with_extension
+
+@app.get("/ping")
+async def ping():
+    return {"message": "API is running fine 🎯"}
+
 
 @app.post("/api-detect", response_model=FashionResponse)
 async def detect_gender(file: UploadFile = File(...)):
